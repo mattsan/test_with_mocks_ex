@@ -4,15 +4,12 @@ defmodule FizzBuzz do
   """
 
   @doc """
-  Hello world.
+  外部コマンド `fb` を利用して FizzBuzz する。
 
-  ## Examples
-
-      iex> FizzBuzz.hello
-      :world
-
+  `fb` コマンドは各自実装してください。
   """
-  def hello do
-    :world
+  def fizz_buzz(n) do
+    {res, _} = System.cmd("fb", ["#{n}"])
+    res
   end
 end
